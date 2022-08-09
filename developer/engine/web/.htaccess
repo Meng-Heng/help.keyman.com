@@ -1,0 +1,7 @@
+
+# Redirect legacy /content/ paths to corresponding subfolder
+RewriteRule "content(\/)?(.*)" "/developer/engine/web/2.0/$2" [L]
+
+
+# Redirect unversioned paths to current-version/ path
+RedirectMatch "/developer/engine/web/(?!faq|history|current-version|\d+\.\d+)(.*)" "/developer/engine/web/current-version/$2"
